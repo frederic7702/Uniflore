@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <title>
+        Uniflor
+    </title>
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+    <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop1" data-toggle="dropdown">
+                Abonnement
+            </a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#section11">Abonement de la vie</a>
+                <a class="dropdown-item" href="#section12">Abonnement de la mort</a>
+            </div>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop2" data-toggle="dropdown">
+                Offres
+            </a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#section21">Roses</a>
+                <a class="dropdown-item" href="#section22">Muguets</a>
+            </div>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop3" data-toggle="dropdown">
+                produits
+            </a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#section31">Rose</a>
+                <a class="dropdown-item" href="#section32">Muguets</a>
+            </div>
+        </li>
+    </ul>
+</nav>
+
+<div id="section11" class="container-fluid bg-white" style="padding-top:140px;padding-bottom:140px">
+    <div id="demo" class="carousel slide" data-ride="carousel">
+
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+            <li data-target="#demo" data-slide-to="0" class="active"></li>
+            <li data-target="#demo" data-slide-to="1"></li>
+            <li data-target="#demo" data-slide-to="2"></li>
+        </ul>
+
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+            <div class="carousel-item active" align="center">
+                <img src="/image/Fleurs-tendresse.jpg" alt="Bouquets" width="400px" height="320px">
+            </div>
+            <div class="carousel-item" align="center">
+                <img src="/image/flowers-19830__340.jpg" alt="Offres" width="400px" height="320px">
+            </div>
+            <div class="carousel-item" align="center">
+                <img src="/image/le-langage-des-fleurs.jpg" alt="Produits" width="400px" height="320px">
+            </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+
+    </div>
+
+    {% for i in 0..10 %}
+    <span>
+        <div class="card" style="width:20rem;margin:20px 0 24px 0;text-align:justify" >
+
+    <img class="card-img-top" src="/image/4294e83f.jpg" alt="image" style="width:100%">
+            <div class="card-body">
+                <h4 class="card-title">Rose</h4>
+                <p class="card-text">Some example text some example text. this is a certain type of flower</p>
+                <a href="javascript:void(0)" class="btn btn-primary">Voir détail</a>
+            </div>
+    </div>
+    </span>
+    {% endfor %}
+
+</body>
+</html>

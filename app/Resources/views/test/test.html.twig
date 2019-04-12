@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        MonSite
+    </title>
+</head>
+<body>
+
+    <h1>Bienvenue à Uniflore, {{ username }}</h1>
+<ol>
+{% for produit in listProduits %}
+    <li>{{produit.libelle}}<a href="{{ path("fiche_article",{"id":produit.id}) }}">(voir fiche)</a></li>
+    {%endfor%}
+</ol>
+</body>
+</html>
